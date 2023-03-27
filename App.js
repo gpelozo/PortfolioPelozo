@@ -5,7 +5,7 @@ import { useFonts } from "expo-font"
 import { NavigationContainer } from "@react-navigation/native"
 import BottomTabNavigator from "./src/navigation/BottomTabNavigator"
 
-import store from './store'
+import store from "./src/store"
 
 import { init } from './src/db';
 

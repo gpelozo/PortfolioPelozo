@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { FlatList } from 'react-native'
 import { useSelector, useDispatch } from 'react-redux'
 import PlaceItem from '../components/PlaceItem'
-import * as addressAction from "../../store/actions/places.actions"
+import * as addressAction from "../store/actions/places.actions"
 
 const PlaceListScreen = ({navigation}) => {
     const dispatch = useDispatch()

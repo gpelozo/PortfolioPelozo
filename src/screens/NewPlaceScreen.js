@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux'
 import ImageSelector from '../components/ImageSelector'
 import LocationSelector from '../components/LocationSelector'
 import { COLORS } from '../constants'
-import { addPlace } from '../../store/actions/places.actions'
+import { addPlace } from '../store/actions/places.actions'
 
 const NewPlaceScreen = ({navigation, route}) => {
     const dispatch = useDispatch()
