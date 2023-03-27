@@ -24,7 +24,7 @@ export default BottomTabNavigator = () => {
                 tabBarIcon: () => (
                     <View style={styles.icon}>
                         <Ionicons name="home" size={20} color="black" />
-                        <Text>Tienda</Text>
+                        <Text>Servicios</Text>
                     </View>
                 )
             }}
@@ -34,17 +34,7 @@ export default BottomTabNavigator = () => {
                 tabBarIcon: () => (
                     <View style={styles.icon}>
                         <Ionicons name="cart" size={20} color="black" />
-                        <Text>Carrito</Text>
-                    </View>
-                )
-            }}
-            />
-            <BottomTabs.Screen name="OrdersTab" component={OrdersNavigator}
-            options={{
-                tabBarIcon: () => (
-                    <View style={styles.icon}>
-                        <Ionicons name="list" size={20} color="black" />
-                        <Text>Ordenes</Text>
+                        <Text>Seleccion</Text>
                     </View>
                 )
             }}
@@ -54,7 +44,17 @@ export default BottomTabNavigator = () => {
                 tabBarIcon: () => (
                     <View style={styles.icon}>
                         <Ionicons name="map-outline" size={20} color="black" />
-                        <Text>Lugares</Text>
+                        <Text>Tu Idea</Text>
+                    </View>
+                )
+            }}
+            />
+            <BottomTabs.Screen name="OrdersTab" component={OrdersNavigator}
+            options={{
+                tabBarIcon: () => (
+                    <View style={styles.icon}>
+                        <Ionicons name="list" size={20} color="black" />
+                        <Text>Presupuestos</Text>
                     </View>
                 )
             }}

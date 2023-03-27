@@ -31,7 +31,7 @@ const PlaceNavigator = () => {
             name="Direcciones"
             component={PlaceListScreen}
             options={({navigation}) => ({
-                title: "Direcciones",
+                title: "Capturá lo que te motiva",
                 headerRight: () => (
                     <TouchableOpacity onPress={() => navigation.navigate("Nuevo")}>
                         <Ionicons

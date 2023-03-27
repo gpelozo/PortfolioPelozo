@@ -18,7 +18,7 @@ export default OrdersNavigator = () => {
           name="Orders"
           component={OrdersScreen}
           options={{
-            title: "Ordenes"
+            title: "Presupuestos"
           }}
           />
     </Stack.Navigator>

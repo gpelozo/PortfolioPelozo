@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingLeft: 15,
+    paddingLeft: 1,
   },
   textContainer: {
     width: "60%",
@@ -55,7 +55,8 @@ const styles = StyleSheet.create({
   },
   text: {
     color: "white",
-    fontFamily: "ArchivoNarrowBold"
+    fontFamily: "ArchivoNarrowBold",
+    fontSize: 40,
     },
   imageContainer: {
     width: "40%",

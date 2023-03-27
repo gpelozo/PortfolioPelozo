@@ -9,20 +9,20 @@ export const CATEGORIES = [
     },
     {
         id: "2",
-        title: "Investigacion de Mercado",
+        title: "Marketing",
         img: "https://tse4.mm.bing.net/th?id=OIP.ZfzaCkda1WVs_v46r41A-QHaHj",
         color: COLORS.secondary,
     },  
     {
         id: "3",
-        title: "Tecnologias Aditivas",
-        img: "https://tse1.mm.bing.net/th?id=OIP.Gd64qTWLFPVFeFj3yqWXTQHaDh",
+        title: "Redes Sociales",
+        img: "https://tse1.mm.bing.net/th?id=OIP.wT_X7elIBQUkWju0Fpi3EwHaEJ",
         color: COLORS.tertiary,
     },  
     {
         id: "4",
-        title: "Metodologias Agiles",
-        img: "https://tse1.mm.bing.net/th?id=OIP.EF3QWsaUqG7rtTC4Gj0qKAHaFj",
+        title: "Diseño de Experiencias",
+        img: "https://tse1.mm.bing.net/th?id=OIP.YdwCcGb2iAX-08wiSrbuAQHaFq",
         color: COLORS.quaternary,
     },
 ]
