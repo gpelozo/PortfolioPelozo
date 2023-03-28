@@ -60,7 +60,7 @@ export const PRODUCTS = [
         description: "Encuestas e indicadores",
         explanation: "Metodo Saulquin sacado directo del Observatorio de Tendencias SciELO.",
         price: 46000,
-        img: "https://i.ibb.co/ck1FWyR/TP1-Gimenez-Jorge-Marin-Pelozo.jpg",
+        img: "https://i.ibb.co/ck1FWyR/Tendencias2022.jpg",
     },
     {
         id: "8",
