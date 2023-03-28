@@ -5,7 +5,7 @@ import CartItem from "../components/CartItem"
 import { useSelector, useDispatch } from 'react-redux'
 import { confirmCart, removeItem } from '../store/actions/cart.action'
 
-const CartScreen = () => {
+const CartScreen = ({navigation}) => {
     const dispatch = useDispatch()
     const items = useSelector( (state) => state.cart.items)
     const total = useSelector( (state) => state.cart.total)

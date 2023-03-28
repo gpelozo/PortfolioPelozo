@@ -27,7 +27,7 @@
       "package": "com.cepoid.portfolio",
       "versionCode": 1,
       "adaptiveIcon": {
-        "foregroundImage": "./src/assets/images/adaptive-icon.jpeg",
+        "foregroundImage": "./src/assets/images/splash.jpeg",
         "backgroundColor": "#FFFFFF"
       }
     },
