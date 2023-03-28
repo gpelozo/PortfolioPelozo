@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "MapsApp",
-    "slug": "mapsapp",
+    "name": "PortfolioPelozo",
+    "slug": "portfoliopelozo",
     "version": "1.0.0",
     "platforms": [
       "ios",
@@ -19,26 +19,36 @@
       "**/*"
     ],
     "ios": {
-      "bundleIdentifier": "com.coderhouse.places",
+      "bundleIdentifier": "com.cepoid.portfolio",
       "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.coderhouse.places",
+      "package": "com.cepoid.portfolio",
       "versionCode": 1,
       "adaptiveIcon": {
         "foregroundImage": "./src/assets/images/adaptive-icon.jpeg",
         "backgroundColor": "#FFFFFF"
-      },
-      "permissions": [
-        "CAMERA",
-        "ACCESS_FINE_LOCATION",
-        "WRITE_EXTERNAL_STORAGE"
-      ]
+      }
+    },
+    "permissions": [
+      "CAMERA",
+      "ACCESS_FINE_LOCATION",
+      "WRITE_EXTERNAL_STORAGE"
+    ],
+    "config": {
+      "googleMaps": {
+        "apiKey": "AIzaSyCKDnqOf3q9j1Bgz_G01lfnFG6_P8dIb"
+      }
     },
     "web": {
       "favicon": "./src/assets/images/favicon.jpeg"
     },
-    "owner": "gpelozo"
+    "owner": "cepoid",
+    "extra": {
+      "eas": {
+        "projectId": "e2ee1eb7-6730-4c21-8c34-e1cbbb5b41b1"
+      }
+    }
   }
 }

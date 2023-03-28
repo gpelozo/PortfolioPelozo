@@ -5,7 +5,7 @@ import MapPreview from '../components/MapPreview'
 import { COLORS } from '../constants'
 
 const PlaceDetailScreen = ({route}) => {
-    const { placeId } = route.params;
+    const {placeId} = route.params
     const place = useSelector((state) =>
     state.places.places.find((item) => item.id === placeId)
     )
@@ -15,13 +15,10 @@ const PlaceDetailScreen = ({route}) => {
 
     return (
         <ScrollView contentContainerStyle={styles.container}>
-            <View style={styles.textContainer}>
-                <Text style={styles.title}>{place.address}</Text>
-            </View>
-            <Image source={{ uri: place.image }} style={styles.image} />
+          <Image source={{ uri: place.image }} style={styles.image} />
             <View style={styles.location}>
                 <View style={styles.addressContainer}>
-                    <Text>{"Mapa"}</Text>
+                  <Text style={styles.title}>{place.address}</Text>
                 </View>
                 <MapPreview
                     style={styles.map}

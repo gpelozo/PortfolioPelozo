@@ -11,6 +11,13 @@ const LocationSelector = props => {
     const [pickedLocation, setPickedLocation] = useState()
     const route = useRoute()
 
+    useEffect(() => {
+        if (props.mapLocation) {
+            setPickedLocation(props.mapLocation)
+            props.onLocation(props.mapLocation)
+        }
+    }, [props.mapLocation])
+
     const verifyPermissions = async () => {
 
         const {status} = await Location.requestForegroundPermissionsAsync()
@@ -26,7 +33,8 @@ const LocationSelector = props => {
 
     const handleGetLocation = async () => {
         const isLocationOk = await verifyPermissions()
-        if (!isLocationOk) return;
+        if (!isLocationOk) return
+        
         const location = await Location.getCurrentPositionAsync({
             timeout: 5000,
         })
@@ -47,15 +55,6 @@ const LocationSelector = props => {
 
         navigation.navigate("Map")
     }
-
-    const mapLocation = route?.params?.mapLocation
-    
-    useEffect(() => {
-        if (mapLocation) {
-            setPickedLocation(mapLocation)
-            props.onLocation(mapLocation)
-        }
-    }, [mapLocation])
 
   return (
     <View style={styles.container}>

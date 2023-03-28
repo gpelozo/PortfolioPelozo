@@ -3,7 +3,7 @@ import React from 'react'
 import Map from "../constants/Map"
 
 const MapPreview = ({location, style, children}) => {
-    const MapPreviewUrl = location ? `https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=12&size=600x300&maptype=roadmap&markers=color:blue%7C${location.lat},${location.lng}&key=${Map.API_KEY}`
+    const MapPreviewUrl = location ? `https://maps.googleapis.com/maps/api/staticmap?center=${location.lat},${location.lng}&zoom=12&size=600x300&maptype=roadmap&markers=color:blue%7Clabel:S%7C${location.lat},${location.lng}&key=${Map.API_KEY}`
     : ""
 
   return (

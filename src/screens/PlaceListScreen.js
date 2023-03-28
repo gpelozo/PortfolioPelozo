@@ -14,11 +14,15 @@ const PlaceListScreen = ({navigation}) => {
 
     const renderItem = ({item}) => (
         <PlaceItem
-        title={item.title}
-        image={item.image} 
-        address={item.address} 
-        onSelect={() => navigation.navigate("Detalle")} 
-        />
+            title={item.title}
+            image={item.image} 
+            address={item.address} 
+            onSelect={() => 
+                navigation.navigate("Detalle", {
+                    placeId: item.id,
+            })
+        } 
+    />
     )
     
     return (

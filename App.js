@@ -3,11 +3,11 @@ import { Provider } from 'react-redux'
 
 import { useFonts } from "expo-font"
 import { NavigationContainer } from "@react-navigation/native"
-import BottomTabNavigator from "./src/navigation/BottomTabNavigator"
+import MainNavigation from "./src/navigation"
 
 import store from "./src/store"
 
-import { init } from './src/db';
+import { init } from "./src/db";
 
 init()
   .then(() => console.log("Base de Datos Inicializada"))
@@ -18,7 +18,7 @@ init()
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    ArchivoNarrowBold: require("/Users/coder/ReactNative/Prueba1/portfoliopelozo/src/assets/fonts/Archivo_Narrow/static/ArchivoNarrow-Bold.ttf"),
+    ArchivoNarrowBold: require("./src/assets/fonts/Archivo_Narrow/ArchivoNarrow-Bold.ttf"),
   })
 
   if (!fontsLoaded) {
@@ -28,7 +28,7 @@ export default function App() {
   return ( 
     <Provider store={store}>
       <NavigationContainer>
-        <BottomTabNavigator />
+      <MainNavigation />
       </NavigationContainer>
     </Provider>
   )

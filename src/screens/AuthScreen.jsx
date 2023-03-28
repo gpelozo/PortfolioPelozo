@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, KeyboardAvoidingView, Button, Alert } from 'react-native'
 import React, { useState, useEffect, useReducer, useCallback } from 'react'
 
-import { COLORS } from '../constants/colors' 
+import { COLORS } from "../constants" 
 import { useDispatch } from 'react-redux'
 import { signup } from '../store/actions/auth.action'
 import Input from '../components/Input'
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
         fontSize: 16,
     },
     button: {
-        backgroundColor: COLORS.primary,
+        backgroundColor: COLORS.PRIMARY,
         marginVertical: 20,
     },
 })

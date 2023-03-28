@@ -1,12 +1,12 @@
 import * as SQLite from "expo-sqlite";
 
-const db = SQLite.openDatabase("location.db");
+const db = SQLite.openDatabase("address.db");
 
 export const init = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
-        "create table if not exists location (id integer primary key not null, title text not null, image text not null, address text not null, lat real not null, lng real not null);",
+        "create table if not exists address (id integer primary key not null, title text not null, image text not null, address text not null, lat real not null, lng real not null);",
         [],
         () => {
           resolve();
@@ -24,7 +24,7 @@ export const insertAddress = (title, image, address, lat, lng) => {
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
       tx.executeSql(
-        "insert into location (title, image, address, lat, lng) VALUES (?, ?, ?, ?, ?);",
+        "insert into address (title, image, address, lat, lng) VALUES (?, ?, ?, ?, ?);",
         [title, image, address, lat, lng],
         (_, result) => resolve(result),
         (_, err) => reject(err)
@@ -37,7 +37,7 @@ export const insertAddress = (title, image, address, lat, lng) => {
 export const fetchAddress = () => {
   const promise = new Promise((resolve, reject) => {
     db.transaction(tx => {
-      tx.executeSql("SELECT * FROM location",
+      tx.executeSql("SELECT * FROM address",
         [],
         (_, result) => resolve(result),
         (_, err) => reject(err)

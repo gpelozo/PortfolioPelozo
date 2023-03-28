@@ -5,17 +5,18 @@ import CartItem from "../components/CartItem"
 import { useSelector, useDispatch } from 'react-redux'
 import { confirmCart, removeItem } from '../store/actions/cart.action'
 
-const CartScreen = () => {
+const CartScreen = ({navigation}) => {
     const dispatch = useDispatch()
-    const items = useSelector( state => state.cart.items)
-    const total = useSelector( state => state.cart.total)
+    const items = useSelector( (state) => state.cart.items)
+    const total = useSelector( (state) => state.cart.total)
 
         const handleConfirmCart = () => {
             dispatch(confirmCart(items, total))
+            navigation.navigate("OrdersTab")
         }
 
         const handleDeleteItem = id => {
-            console.log("borrar elemento")
+            console.log(id)
            dispatch(removeItem(id))
         }
 

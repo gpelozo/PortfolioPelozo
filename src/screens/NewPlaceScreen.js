@@ -29,7 +29,8 @@ const NewPlaceScreen = ({navigation, route}) => {
                 <Text style={styles.label}>Titulo</Text>
                 <TextInput style={styles.input} onChangeText={handleTitleChange} />
                 <ImageSelector onImage={setImage} />
-                <LocationSelector onLocation={setLocation}
+                <LocationSelector 
+                onLocation={setLocation}
                 mapLocation={route?.params?.mapLocation} />
                 <Button
                 title="Guardar direccion"

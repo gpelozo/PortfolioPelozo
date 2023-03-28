@@ -4,6 +4,7 @@ export const PRODUCTS = [
         category: "1",
         name: "Branding",
         description: "Marca personal o corporativa",
+        explanation: "Esto",
         weight: "350gr",
         price: 46000,
         img: "https://tse2.mm.bing.net/th?id=OIP.Qbrpim14NohaZqIpPTlD2AHaHa",

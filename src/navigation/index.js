@@ -1,11 +1,13 @@
-import React from 'react'
-import { NavigationContainer } from "@react-navigation/native";
+import React from "react"
 
 // stacks
-import PlaceNavigator from './PlaceNavigator'
+import BottomTabNavigator from "./BottomTabNavigator"
+import AuthNavigator from "./AuthNavigator";
 
-export default () => (
-    <NavigationContainer>
-        <PlaceNavigator />
-    </NavigationContainer>
-)
+import { useSelector } from "react-redux";
+
+
+export default () => {
+    const userId = useSelector(state => state.auth.userId)
+    return <>{userId ? <BottomTabNavigator /> : <AuthNavigator />}</>
+}

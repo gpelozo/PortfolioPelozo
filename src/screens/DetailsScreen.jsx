@@ -1,32 +1,43 @@
-import { StyleSheet, View, Text, Button } from "react-native"
+import { StyleSheet, View, Text, Button, TouchableOpacity, Image } from "react-native"
 import React, { useEffect } from "react"
-import DetailsItem from "../components/DetailsItem"
 import { useSelector, useDispatch } from "react-redux"
 
 import { addItem } from "../store/actions/cart.action"
 
 const DetailsScreen = ({navigation, route}) => {
   const dispatch = useDispatch()
-  const bread = useSelector(state => state.products.selected)
+  const servicio = useSelector((state) => state.products.selected)
 
   useEffect(() => {
     console.log(route.params)
   }, [])
 
   const handleAddItem = () => {
-    dispatch(addItem(bread))
+    dispatch(addItem(servicio))
+    navigation.navigate("CartTab")
   }
-  
-  const renderDetailsItem = ({item}) => (
-    <DetailsItem/>
-  )
 
   return (
-    <View style={styles.container}>
-      <Text>{bread.name}</Text>
-      <Text>{bread.description}</Text>
-      <Text>{bread.price}</Text>
-      <Button title="Add to Cart" onPress={handleAddItem}/>
+      <View
+      style={styles.detailContainer}
+    >
+      <View style={styles.imageContainer}>
+        <Image
+          style={styles.image}
+          source={{
+            uri: servicio.img,
+          }}
+        />
+      </View>
+      <View style={styles.textContainer}>
+        <Text style={styles.text}>{servicio.name}</Text>
+        <Text>{servicio.explanation}</Text>
+        <Text>${servicio.price}</Text>
+      </View>
+        <Button 
+        title="Add to Cart" 
+        onPress={handleAddItem}
+        />
     </View>
   )
 }
@@ -41,8 +52,41 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "white",
   },
-  categoriesContainer: {
+  detailContainer: {
     padding: 15,
     height: 150,
   },
+  itemContainer: {
+    flex: 1,
+    borderRadius: 10,
+    padding: 20,
+    shadowColor: "black",
+    shadowOpacity: 0.5,
+    shadowOffset: { width: 0, height: 2 },
+    shadowRadius: 10,
+    elevation: 5,
+  },
+  imageContainer: {
+    height: "60%",
+  },
+  textContainer: {
+    height: "60%",
+    padding: 10,
+  },
+  image: {
+    height: "100%",
+    width: "100%",
+    borderRadius: 10,
+  },
+  textContainer: {
+    width: "60%",
+    height: "100%",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  text: {
+    color: "white",
+    fontFamily: "ArchivoNarrowBold",
+    fontSize: 40,
+    },
 })

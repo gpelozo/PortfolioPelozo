@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    paddingLeft: 1,
+    paddingLeft: 15,
   },
   textContainer: {
     width: "60%",
@@ -57,7 +57,7 @@ const styles = StyleSheet.create({
     color: "white",
     fontFamily: "ArchivoNarrowBold",
     fontSize: 40,
-    },
+  },
   imageContainer: {
     width: "40%",
     height: "100%",
@@ -72,6 +72,6 @@ const styles = StyleSheet.create({
     height: "100%",
     borderTopRightRadius: 10,
     borderBottomRightRadius: 10,
-    backgroundColor: "red"
+    backgroundColor: "red",
   },
 })

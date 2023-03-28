@@ -2,20 +2,20 @@ import {URL_API} from "../../constants/Database"
 
 export const ADD_ITEM = "ADD_ITEM"
 export const REMOVE_ITEM = "REMOVE_ITEM"
-export const CONFIRM_CART = "CONFIRM_CARTS"
+export const CONFIRM_CART = "CONFIRM_CART"
 
 export const addItem = item => ({
     type: ADD_ITEM,
     item,
 })
 
-export const removeItem = (itemId) => ({
+export const removeItem = itemId => ({
     type: REMOVE_ITEM,
     itemId,
 })
 
 export const confirmCart = (payload, total) => {
-    return async dispatch => {
+    return async (dispatch) => {
         try {
             const response = await fetch(`${URL_API}/ordenes.json`, {
                 method: "POST",

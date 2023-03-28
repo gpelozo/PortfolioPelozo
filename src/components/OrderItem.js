@@ -7,16 +7,27 @@ const formatDay =  time => {
     return date.toLocaleDateString()
 }
 
+const Servicios = props => {
+  const data = props.nombres.map( ({name}) => {
+    return [name]
+  })
+  return(
+    <Text>{data}</Text>
+  )
+}
+
 const OrderItem = ({item, onDelete }) => {
   return (
     <View style={styles.order}>
       <View>
-        <Text style={styles.date}>{formatDay(item.date)}</Text>
-        <Text style={styles.total}>total</Text>
+        <Text style={styles.date}>Fecha: {formatDay(item.date)}</Text>
+        <Text style={styles.date}>Servicios: </Text>
+        <Servicios nombres={item.items} />
+        <Text style={styles.total}>Total: {item.total}</Text>
      </View>
      <View>
         <TouchableOpacity onPress={() => onDelete()}>
-            <Ionicons name="md-trash" color={"red"} size={22}/>
+            <Ionicons name="md-trash" color={"red"} size={30}/>
         </TouchableOpacity>
      </View>
     </View>

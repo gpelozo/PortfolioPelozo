@@ -21,7 +21,7 @@ const ImageSelector = props => {
         return true
     }
 
-    const handlerTakeImage = async () => {
+    const handleTakeImage = async () => {
         const isCameraOk = await verifyPermissions()
         if (!isCameraOk) return
 
@@ -45,7 +45,7 @@ const ImageSelector = props => {
     <Button 
     title="Tomar foto"
     color={COLORS.LIGHT_PINK}
-    onPress={handlerTakeImage}
+    onPress={handleTakeImage}
     />
     </View>
   )
