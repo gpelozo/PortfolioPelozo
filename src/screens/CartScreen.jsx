@@ -1,11 +1,11 @@
 import { StyleSheet, Text, View, FlatList, TouchableOpacity} from 'react-native'
-import React from 'react'  
+import React, {useEffect} from 'react'  
 import CartItem from "../components/CartItem"
 
 import { useSelector, useDispatch } from 'react-redux'
 import { confirmCart, removeItem } from '../store/actions/cart.action'
 
-const CartScreen = ({navigation}) => {
+const CartScreen = () => {
     const dispatch = useDispatch()
     const items = useSelector( (state) => state.cart.items)
     const total = useSelector( (state) => state.cart.total)
@@ -15,8 +15,7 @@ const CartScreen = ({navigation}) => {
             navigation.navigate("OrdersTab")
         }
 
-        const handleDeleteItem = id => {
-            console.log(id)
+        const handleDeleteItem = (id) => {
            dispatch(removeItem(id))
         }
 

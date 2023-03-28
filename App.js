@@ -18,7 +18,7 @@ init()
 
 export default function App() {
   const [fontsLoaded] = useFonts({
-    ArchivoNarrowBold: require("./src/assets/fonts/Archivo_Narrow/ArchivoNarrow-Bold.ttf"),
+    ArchivoNarrowBold: require("./src/assets/fonts/ArchivoNarrow-Bold.ttf"),
   })
 
   if (!fontsLoaded) {

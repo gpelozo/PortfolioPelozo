@@ -18,7 +18,7 @@ export default CartNavigator = () => {
           fontFamily: "ArchivoNarrowBold",
           fontSize: 30,
       },
-  }}
+    }}
     >
     <Stack.Screen
           name="Cart"

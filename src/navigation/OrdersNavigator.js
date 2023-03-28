@@ -9,9 +9,15 @@ export default OrdersNavigator = () => {
     initialRouteName="Categories"
     screenOptions={{
       headerShadowVisible: false,
+      headerTintColor: "#F2F2F2",
+      headerStyle: {
+        backgroundColor: "#D0D98B",
+      },
       headerTitleStyle: {
-        fontWeight: "bold"
-      }
+          fontWeight: "bold",
+          fontFamily: "ArchivoNarrowBold",
+          fontSize: 30,
+      },
     }}
     >
     <Stack.Screen

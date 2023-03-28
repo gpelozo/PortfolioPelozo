@@ -12,7 +12,7 @@ const CartReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         case REMOVE_ITEM:
             const cleanCart = [...state.items].filter(
-                item => item.id === action.itemId
+                item => item.id !== action.itemId
                 )
                 return{...state, items: cleanCart, total: sumTotal(cleanCart)}
         case ADD_ITEM:
@@ -22,10 +22,12 @@ const CartReducer = (state = INITIAL_STATE, action) => {
                 if (indexItem === -1) {
                     const item = {...action.item, quantity: 1}
                     const updateCart = [...state.items, item]
+                    console.log(updateCart)
                     return {...state, items: updateCart, total: sumTotal(updateCart)}
                 }
-                const items = [...state.items].map(item => {
-                    if (item.id === action.item.id) item.quantity++
+                const items = [...state.items].map((item) => {
+                    if (item.id === action.item.id) item.quantity++;
+
                     return item
                 })
                 return {...state, items, total: sumTotal(items)}

@@ -1,4 +1,4 @@
-import { StyleSheet, View, Text, Button, TouchableOpacity, Image } from "react-native"
+import { StyleSheet, View, Text, TouchableOpacity, Image } from "react-native"
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
 
@@ -31,13 +31,14 @@ const DetailsScreen = ({navigation, route}) => {
       </View>
       <View style={styles.textContainer}>
         <Text style={styles.text}>{servicio.name}</Text>
-        <Text>{servicio.explanation}</Text>
-        <Text>${servicio.price}</Text>
+        <Text style={styles.text2}>{servicio.explanation}</Text>
+        <Text style={styles.text3}>${servicio.price}</Text>
+        <TouchableOpacity style={styles.TouchableOpacity} onPress={handleAddItem}>
+          <View>
+            <Text style={{fontSize:30, color:'white'}}>Seleccionar</Text>
+          </View>
+        </TouchableOpacity>
       </View>
-        <Button 
-        title="Add to Cart" 
-        onPress={handleAddItem}
-        />
     </View>
   )
 }
@@ -47,31 +48,18 @@ export default DetailsScreen
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "white",
   },
   detailContainer: {
     padding: 15,
-    height: 150,
-  },
-  itemContainer: {
-    flex: 1,
-    borderRadius: 10,
-    padding: 20,
-    shadowColor: "black",
-    shadowOpacity: 0.5,
-    shadowOffset: { width: 0, height: 2 },
-    shadowRadius: 10,
-    elevation: 5,
+    height: "100%",
   },
   imageContainer: {
-    height: "60%",
-  },
-  textContainer: {
-    height: "60%",
-    padding: 10,
+    flex: 0.5,
+    height: "50%",
   },
   image: {
     height: "100%",
@@ -79,14 +67,31 @@ const styles = StyleSheet.create({
     borderRadius: 10,
   },
   textContainer: {
-    width: "60%",
-    height: "100%",
-    justifyContent: "center",
+    width: "100%",
+    height: "20%",
     alignItems: "center",
   },
   text: {
-    color: "white",
+    color: "red",
     fontFamily: "ArchivoNarrowBold",
-    fontSize: 40,
+    fontSize: 50,
+    textAlign: "center",
+    },
+  text2: {
+    color: "brown",
+    fontFamily: "ArchivoNarrowBold",
+    fontSize: 20,
+    },
+  text3: {
+    color: "lightblue",
+    fontFamily: "ArchivoNarrowBold",
+    fontSize: 60,
+    },
+    TouchableOpacity:{
+      paddingHorizontal:10,
+      paddingVertical:5,
+      borderRadius:5,
+      borderColor:'gray',
+      backgroundColor:'#84563c'
     },
 })

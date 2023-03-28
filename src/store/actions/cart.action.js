@@ -15,7 +15,7 @@ export const removeItem = itemId => ({
 })
 
 export const confirmCart = (payload, total) => {
-    return async (dispatch) => {
+    return async dispatch => {
         try {
             const response = await fetch(`${URL_API}/ordenes.json`, {
                 method: "POST",

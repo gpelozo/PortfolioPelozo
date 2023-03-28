@@ -18,14 +18,17 @@ const PlaceNavigator = () => {
     <PlaceStack.Navigator
         initialRoute="Categories"
         screenOptions={{
+            headerShadowVisible: false,
+            headerTintColor: "#F2F2F2",
             headerStyle: {
-                backgroundColor: Platform.OS === "android" ? COLORS.DARK_SIENNA : "",
+              backgroundColor: "#D0D98B",
             },
-            headerTintColor: Platform.OS === "android" ? "white" : COLORS.DARK_SIENNA,
             headerTitleStyle: {
                 fontWeight: "bold",
-            }
-        }}
+                fontFamily: "ArchivoNarrowBold",
+                fontSize: 30,
+            },
+          }}
     >
         <PlaceStack.Screen
             name="Direcciones"
