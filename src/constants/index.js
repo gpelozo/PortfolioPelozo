@@ -1,1 +1,5 @@
-export { default as COLORS } from "./Colors"
+import colors from "./Colors";
+
+
+
+export default colors;
